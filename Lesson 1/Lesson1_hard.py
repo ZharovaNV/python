@@ -17,15 +17,28 @@ surname = input('Ваша фамилия:')
 age = int(input('Ваш возраст:'))
 weight = int(input('Ваш вес:'))
 
-if age <= 30 and weight >= 50 and weight <= 120:
-    print(name, surname, age, 'год, вес', weight, '- хорошее состояние')
-elif age > 40 and weight < 50:
-    print(name, surname, age, 'год, вес', weight, '- следует обратится к врачу!')	
-elif age > 40 and weight > 120:
-    print(name, surname, age, 'год, вес', weight, '- следует обратится к врачу!')
-elif age > 30 and weight < 50:	
-    print(name, surname, age, 'год, вес', weight, '- следует заняться собой')
-elif age > 30 and weight > 120:	
-    print(name, surname, age, 'год, вес', weight, '- следует заняться собой')
+if age <= 30:
+    if weight < 50: 
+	    print(name, surname, age, 'год, вес', weight, '- нужно больше есть')
+    elif weight > 120:
+	    print(name, surname, age, 'год, вес', weight, '- нужно меньше есть')
+    else:	
+        print(name, surname, age, 'год, вес', weight, '- хорошее состояние')
+elif age > 40: 
+    if weight < 50:
+        print(name, surname, age, 'год, вес', weight, '- следует обратится к врачу!')	
+    elif weight > 120:
+        print(name, surname, age, 'год, вес', weight, '- следует обратится к врачу!')
+    else:
+	    print(name, surname, age, 'год, вес', weight, '- все ОК')
+elif age > 30:
+    if weight < 50:	
+        print(name, surname, age, 'год, вес', weight, '- следует заняться собой')
+    elif weight > 120:	
+        print(name, surname, age, 'год, вес', weight, '- следует заняться собой')
+    else:
+	    print(name, surname, age, 'год, вес', weight, '- все ОК')	
 else:
-    print(name, surname, age, 'год, вес', weight, '- фантазии не хватило')	
+    print(name, surname, age, 'год, вес', weight, '- все ОК')	
+	
+	
